@@ -4,4 +4,6 @@ export const navLinks = [
     { href: "/services", label: "Institucional" },
     { href: "/contact", label: "Transparência" },
     { href: "/voluntariado", label: "Voluntariado" },
+    { href: "/noticias", label: "Notícias" },
+    { href: "/faq", label: "FAQ" },
 ];

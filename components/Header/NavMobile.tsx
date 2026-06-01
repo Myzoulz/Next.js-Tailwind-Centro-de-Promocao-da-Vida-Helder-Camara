@@ -12,7 +12,7 @@ export default function NavMobile({ open, onToggle, onClose }: NavMobileProps) {
     return (
         <>
             <button
-                className="md:hidden text-indigo-900 hover:text-indigo-950 transition-colors"
+                className="lg:hidden text-indigo-900 hover:text-indigo-950 transition-colors"
                 onClick={onToggle}
                 aria-label="Abrir menu"
             >
@@ -20,7 +20,7 @@ export default function NavMobile({ open, onToggle, onClose }: NavMobileProps) {
             </button>
 
             {open && (
-                <div className="absolute top-28 left-0 w-full bg-amber-100 border-t border-amber-200 md:hidden">
+                <div className="absolute top-28 left-0 w-full bg-amber-100 border-t border-amber-200 lg:hidden">
                     <nav className="flex flex-col px-6 pb-4">
                         {navLinks.map((link) => (
                             <Link
