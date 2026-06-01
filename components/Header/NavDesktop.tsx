@@ -8,7 +8,7 @@ export default function NavDesktop() {
                 <Link
                     key={link.href + link.label}
                     href={link.href}
-                    className="hover:text-indigo-950 transition-colors duration-300">
+                    className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-indigo-950 transition-colors duration-300 border-b-2 border-transparent hover:border-indigo-950">
                     {link.label}
                 </Link>
             ))}
