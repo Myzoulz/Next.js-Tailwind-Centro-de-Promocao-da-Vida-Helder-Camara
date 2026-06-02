@@ -1,1 +1,53 @@
 @import "tailwindcss";
+
+@theme {
+/* Escala de tons para a cor #08145C (brand) */
+    --color-brand-700: #0f21a2;
+    --color-brand-800: #111f83;
+    --color-brand-900: #08145C;
+    --color-brand-950: #040938;
+}
+
+.btn-nav {
+    @apply bg-gray-200/40 border border-gray-300 hover:bg-gray-300 text-brand-900 cursor-pointer py-2 px-4 rounded-full flex items-center gap-1 hover:-translate-y-[1px] transition-transform;
+}
+
+.btn-nav-active {
+    @apply bg-yellow-400 hover:bg-yellow-500 border-yellow-500;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-fadeSlide {
+    animation-name: slideIn;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-zoomIn {
+    animation-name: zoomIn;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
