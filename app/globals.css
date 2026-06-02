@@ -8,6 +8,14 @@
     --color-brand-950: #040938;
 }
 
+.btn-nav {
+    @apply bg-gray-200/40 border border-gray-300 hover:bg-gray-300 text-brand-900 cursor-pointer py-2 px-4 rounded-full flex items-center gap-1 hover:-translate-y-[1px] transition-transform;
+}
+
+.btn-nav-active {
+    @apply bg-yellow-400 hover:bg-yellow-500 border-yellow-500;
+}
+
 @keyframes slideIn {
     from {
         opacity: 0;
