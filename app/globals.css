@@ -51,3 +51,23 @@
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
+
+@keyframes underline-expand {
+    0% { width: 0; }
+    80% { width: 105%; }
+    100% { width: 100%; }
+}
+
+.animate-underline-expand::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: currentColor;
+}
+
+.animate-underline-expand:hover::after {
+    animation: underline-expand 0.3s ease forwards;
+}
