@@ -1,9 +1,13 @@
 "use client";
-
 import HeroNav from "./HeroNav";
-import {Heart} from "lucide-react";
+import { Heart } from "lucide-react";
 
-export default function HeroContent() {
+interface Props {
+    selected: string;
+    onSelect: (label: string, index: number) => void;
+}
+
+export default function HeroContent({ selected, onSelect }: Props) {
     return (
         <section className="h-full flex flex-col justify-center gap-4 px-12 overflow-hidden">
             <button
@@ -26,9 +30,8 @@ export default function HeroContent() {
                     <span className="flex items-center gap-1.5">Como Doar <Heart className="w-4 h-4" /></span>
                 </button>
             </div>
-
             <div className="hidden md:flex flex-col min-h-0 flex-1 overflow-hidden">
-                <HeroNav />
+                <HeroNav selected={selected} onSelect={onSelect} />
             </div>
         </section>
     );
