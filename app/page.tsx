@@ -1,19 +1,18 @@
 import Header from "@/components/Header";
 import Hero from '../components/Hero/index';
-import HeroNav from "@/components/Hero/HeroNav";
+import DataNumbers from "@/components/DataNumbers";
 
 export default function Home() {
   return (
     <main>
-      <section className="h-dvh w-full">
+      <section className="relative md:h-dvh w-full shadow-lg">
         <Header />
         <Hero />
       </section>
-      <div className="block md:hidden mt-4 px-8">
-          <HeroNav />
-      </div>
-      <section className="h-dvh w-full bg-amber-900">
+      <section className="h-16 w-full bg-zinc-200/60" >
+
       </section>
+      <DataNumbers />
     </main>
   );
 }
