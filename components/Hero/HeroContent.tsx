@@ -23,10 +23,10 @@ export default function HeroContent({ selected, onSelect }: Props) {
                 Há 26 anos atuando diariamente construindo oportunidades com amor e solidariedade para a comunidade do Genibaú e região
             </h2>
             <div className="flex flex-row gap-4 mb-4 text-base lg:text-xl font-semibold shrink-0">
-                <button className="bg-brand-900 hover:bg-brand-950 text-white py-2 px-4 rounded-lg cursor-pointer animate-zoomIn [animation-duration:2000ms]">
+                <button className="bg-brand-900 hover:bg-brand-950 text-white py-2 px-4 rounded-lg cursor-pointer animate-zoomIn">
                     <span>Conheça</span>
                 </button>
-                <button className="bg-yellow-300 hover:bg-yellow-400/70 text-brand-900 py-2 px-4 rounded-lg cursor-pointer animate-zoomIn [animation-duration:2000ms]">
+                <button className="bg-yellow-300 hover:bg-yellow-400/70 text-brand-900 py-2 px-4 rounded-lg cursor-pointer animate-zoomIn">
                     <span className="flex items-center gap-1.5">Como Doar <Heart className="w-4 h-4" /></span>
                 </button>
             </div>

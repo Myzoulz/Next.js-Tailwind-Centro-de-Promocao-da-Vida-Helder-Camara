@@ -33,7 +33,6 @@ export default function Hero() {
                 </div>
             </section>
 
-            {/* nav mobile — abaixo do carrossel */}
             <div className="md:hidden px-8 mt-6">
                 <HeroNav selected={selected} onSelect={handleSelect} />
             </div>

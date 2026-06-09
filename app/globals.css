@@ -50,11 +50,11 @@
     animation-name: zoomIn;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
+    animation-duration: 2.5s;
 }
 
 @keyframes underline-expand {
     0% { width: 0; }
-    80% { width: 105%; }
     100% { width: 100%; }
 }
 
@@ -70,4 +70,10 @@
 
 .animate-underline-expand:hover::after {
     animation: underline-expand 0.3s ease forwards;
+}
+
+@layer utilities {
+    .zoom-on-hover {
+        @apply transition-transform duration-200 hover:scale-125;
+    }
 }
