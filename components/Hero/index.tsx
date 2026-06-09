@@ -8,7 +8,7 @@ import HeroNav from "./HeroNav";
 import { navItems } from "./navItems";
 
 export default function Hero() {
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()]);
+    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 5000 })]);
     const [selected, setSelected] = useState("Educação");
 
     useEffect(() => {
@@ -33,7 +33,7 @@ export default function Hero() {
                 </div>
             </section>
 
-            <div className="md:hidden px-8 mt-6">
+            <div className="md:hidden px-8 mt-6 flex flex-col max-h-[35vh]">
                 <HeroNav selected={selected} onSelect={handleSelect} />
             </div>
         </main>
