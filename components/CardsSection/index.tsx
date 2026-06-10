@@ -4,6 +4,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { cardsContent } from "./cardsContent";
 import Card from "./Cards";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function CardsSection() {
     const [emblaRef, emblaApi] = useEmblaCarousel(
@@ -30,17 +31,17 @@ export default function CardsSection() {
 
                 <button
                     onClick={() => emblaApi?.scrollPrev()}
-                    className="cursor-pointer absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 z-10 bg-white shadow-md rounded-full w-9 h-9 flex items-center justify-center hover:bg-zinc-100 transition"
+                    className="btn-carousel -translate-x-2 left-0"
                     aria-label="Anterior"
                 >
-                    ‹
+                    <ChevronLeft size={16} />
                 </button>
                 <button
                     onClick={() => emblaApi?.scrollNext()}
-                    className="cursor-pointer absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 z-10 bg-white shadow-md rounded-full w-9 h-9 flex items-center justify-center hover:bg-zinc-100 transition"
+                    className="btn-carousel translate-x-2 right-0"
                     aria-label="Próximo"
                 >
-                    ›
+                    <ChevronRight size={16} />
                 </button>
             </div>
         </section>

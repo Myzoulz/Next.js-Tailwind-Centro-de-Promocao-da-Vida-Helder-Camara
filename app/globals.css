@@ -77,3 +77,9 @@
         @apply transition-transform duration-200 hover:scale-125;
     }
 }
+
+@layer components {
+    .btn-carousel {
+        @apply cursor-pointer absolute top-1/2 -translate-y-1/2 z-10 bg-zinc-300/80 shadow-md rounded-full w-9 h-9 flex items-center justify-center hover:bg-zinc-100 transition;
+    }
+}
