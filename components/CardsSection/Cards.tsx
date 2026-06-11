@@ -20,7 +20,7 @@ export default function Card({ titulo, descricao, imagem }: cardContent) {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <button className="cursor-pointer mt-2 w-full bg-brand-700 text-white text-sm font-medium py-2 rounded-lg hover:bg-brand-800 transition-colors duration-200">
+                    <button className="default-btn">
                         Saiba Mais
                     </button>
                 </a>

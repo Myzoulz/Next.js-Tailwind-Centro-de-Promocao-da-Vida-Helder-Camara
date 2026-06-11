@@ -9,6 +9,9 @@ export default function AboutSection() {
             <div className="flex flex-col gap-6 max-w-md">
                 <Reference />
                 <AboutText />
+                <a href="/about" className="default-btn">
+                    Saiba Mais
+                </a>
             </div>
         </section>
     );
