@@ -3,6 +3,7 @@ import Hero from '../components/Hero/index';
 import DataNumbers from "@/components/DataNumbers";
 import CardsSection from "@/components/CardsSection";
 import AboutSection from '../components/AboutSection/index';
+import DonateSection from "@/components/DonateSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <CardsSection />
       <DataNumbers />
       <AboutSection />
+      <DonateSection />
     </main>
   );
 }
