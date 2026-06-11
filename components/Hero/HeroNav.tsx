@@ -26,7 +26,7 @@ export default function HeroNav({ selected, onSelect }: Props) {
                 ))}
             </div>
             <div className="mt-4 min-h-0 flex-1 overflow-y-auto border-l-4 border-stone-400 pl-4 lg:pl-6">
-                <p className="text-base lg:text-lg xl:text-xl 2xl:text-2xl text-stone-500 leading-relaxed max-w-md font-serif italic px-1 lg:px-2">
+                <p className="main-texts text-stone-500">
                     {itemSelecionado?.conteudo}
                 </p>
             </div>

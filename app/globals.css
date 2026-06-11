@@ -83,3 +83,9 @@
         @apply cursor-pointer absolute top-1/2 -translate-y-1/2 z-10 bg-zinc-300/80 shadow-md rounded-full w-9 h-9 flex items-center justify-center hover:bg-zinc-100 transition;
     }
 }
+
+@layer components {
+    .main-texts {
+        @apply text-base lg:text-lg xl:text-xl 2xl:text-2xl leading-relaxed max-w-md font-serif italic px-1 lg:px-2
+    }
+}
