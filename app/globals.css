@@ -89,3 +89,9 @@
         @apply text-base lg:text-lg xl:text-xl 2xl:text-2xl leading-relaxed max-w-md font-serif italic px-1 lg:px-2
     }
 }
+
+@layer components {
+    .default-btn {
+        @apply cursor-pointer mt-2 block w-full bg-brand-700 text-white text-sm font-medium py-2 rounded-lg hover:bg-brand-800 transition-colors duration-200 text-center
+    }
+}

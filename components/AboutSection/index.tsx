@@ -9,7 +9,7 @@ export default function AboutSection() {
             <div className="flex flex-col gap-6 max-w-md">
                 <Reference />
                 <AboutText />
-                <a href="/about" className="cursor-pointer mt-2 block w-full bg-brand-700 text-white text-sm font-medium py-2 rounded-lg hover:bg-brand-800 transition-colors duration-200 text-center">
+                <a href="/about" className="default-btn">
                     Saiba Mais
                 </a>
             </div>
