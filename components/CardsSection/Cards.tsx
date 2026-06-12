@@ -14,7 +14,7 @@ export default function Card({ titulo, descricao, imagem }: cardContent) {
             />
             <div className="p-4 flex flex-col flex-1 gap-2">
                 <h2 className="text-lg font-semibold text-gray-800 line-clamp-2">{titulo}</h2>
-                <p className="text-sm text-gray-500 flex-1 line-clamp-3">{descricao}</p>
+                <p className="text-xs md:text-sm text-gray-500 flex-1 line-clamp-3">{descricao}</p>
                 <a
                     href={whatsappUrl}
                     target="_blank"
