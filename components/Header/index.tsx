@@ -9,7 +9,7 @@ export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <header className="relative w-full bg-amber-100 shadow-md shadow-amber-200/45">
+        <header className="relative w-full bg-brand-900 shadow-md shadow-brand-700/45">
             <div className="flex items-center justify-between p-6 h-28">
                 <Logo />
                 <NavDesktop />
