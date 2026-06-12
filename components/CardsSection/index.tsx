@@ -13,7 +13,7 @@ export default function CardsSection() {
     );
 
     return (
-        <section className="w-full bg-zinc-200/60 py-8 px-4">
+        <section className="w-full bg-zinc-200/60 py-12 px-4">
             <h1 className="text-2xl font-bold text-brand-950 mb-4">Nossas Atividades:</h1>
             <div className="relative w-full py-4">
                 <div className="overflow-hidden" ref={emblaRef}>
