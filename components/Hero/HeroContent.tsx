@@ -11,7 +11,7 @@ export default function HeroContent({ selected, onSelect }: Props) {
     return (
         <section className="h-full flex flex-col justify-center gap-4 px-12 overflow-hidden">
             <button
-                className="bg-yellow-300 hover:bg-yellow-400/70 py-2 px-4 rounded-full mt-12 cursor-pointer animate-fadeSlide [animation-duration:2000ms] self-start"
+                className="bg-amber-300 hover:bg-amber-400/80 py-2 px-4 rounded-full mt-12 cursor-pointer animate-fadeSlide [animation-duration:2000ms] self-start"
                 onClick={() => window.open('https://maps.app.goo.gl/q5sFNZhgGDZAsymM6', '_blank')}
             >
                 <span className="text-sm lg:text-base font-bold text-brand-900">✦ Fortaleza, CE</span>
@@ -26,7 +26,7 @@ export default function HeroContent({ selected, onSelect }: Props) {
                 <button className="bg-brand-900 hover:bg-brand-950 text-white py-2 px-4 rounded-lg cursor-pointer animate-zoomIn">
                     <span>Conheça</span>
                 </button>
-                <button className="bg-yellow-300 hover:bg-yellow-400/70 text-brand-900 py-2 px-4 rounded-lg cursor-pointer animate-zoomIn">
+                <button className="bg-amber-300 hover:bg-amber-400/80 text-brand-900 py-2 px-4 rounded-lg cursor-pointer animate-zoomIn">
                     <span className="flex items-center gap-1.5">Como Doar <Heart className="w-4 h-4" /></span>
                 </button>
             </div>

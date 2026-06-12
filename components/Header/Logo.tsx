@@ -7,8 +7,8 @@ export default function Logo() {
                 <img src="/logo.png" alt="Logo" />
             </Link>
             <span className="flex flex-col">
-                <h1 className="text-lg font-bold text-brand-900">CPVHC</h1>
-                <h2 className="text-sm font-medium text-emerald-900">Fortalecendo vidas e inspirando futuros</h2>
+                <h1 className="text-lg font-bold text-amber-200">CPVHC</h1>
+                <h2 className="text-sm font-medium text-zinc-100">Fortalecendo vidas e inspirando futuros</h2>
             </span>
         </div>
     );

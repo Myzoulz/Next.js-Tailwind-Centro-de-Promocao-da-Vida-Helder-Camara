@@ -8,7 +8,7 @@ export default function NavDesktop() {
                 <Link
                     key={link.href + link.label}
                     href={link.href}
-                    className="animate-underline-expand relative text-brand-900 hover:text-brand-950 zoom-on-hover"
+                    className="animate-underline-expand relative text-zinc-100 hover:text-amber-100 zoom-on-hover"
                 >
                     {link.label}
                 </Link>
