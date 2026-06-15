@@ -2,8 +2,8 @@ import { partners } from "./partners";
 
 export default function PartnersSection() {
     return (
-        <section className="w-full py-4 px-6">
-            <h2 className="text-center text-2xl font-bold py-8 text-gray-900">
+        <section className="w-full py-10 px-4">
+            <h2 className="text-center text-3xl font-bold mb-8 text-gray-900">
                 Parcerias
             </h2>
             <div className="max-w-3xl mx-auto grid grid-cols-3 gap-10">

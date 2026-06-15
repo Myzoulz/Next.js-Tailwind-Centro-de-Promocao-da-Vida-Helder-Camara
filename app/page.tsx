@@ -5,6 +5,7 @@ import CardsSection from "@/components/CardsSection";
 import AboutSection from '../components/AboutSection/index';
 import DonateSection from "@/components/DonateSection";
 import PartnersSection from "@/components/PartnersSection";
+import Footer from '../components/Footer/index';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <AboutSection />
       <DonateSection />
       <PartnersSection />
+      <Footer />
     </main>
   );
 }
