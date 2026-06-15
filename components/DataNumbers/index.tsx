@@ -2,8 +2,16 @@ import DataCards from "./DataCards";
 
 export default function DataNumbers() {
     return (
-        <section className="py-8 bg-brand-900 justify-center items-center flex">
-            <DataCards />
+        <section
+            className="relative bg-parallax overflow-hidden"
+            style={{
+                backgroundImage: "url('/donate-background.png')",
+                backgroundAttachment: "fixed"
+            }}
+        >
+            <div className="flex justify-center items-center bg-brand-900/40 h-full py-8">
+                <DataCards />
+            </div>
         </section>
     );
 }

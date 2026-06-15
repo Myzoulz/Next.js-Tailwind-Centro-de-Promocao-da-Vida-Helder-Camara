@@ -3,7 +3,7 @@ import { Heart } from "lucide-react";
 export default function DonateSection() {
     return (
         <section
-            className="relative bg-cover bg-center bg-no-repeat h-70 overflow-hidden"
+            className="relative bg-parallax h-70 overflow-hidden"
             style={{ 
                 backgroundImage: "url('/donate-background.png')",
                 backgroundAttachment: "fixed"

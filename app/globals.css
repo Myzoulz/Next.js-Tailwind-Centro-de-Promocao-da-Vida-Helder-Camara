@@ -95,3 +95,19 @@
         @apply cursor-pointer mt-2 block w-full bg-brand-700 text-white text-sm font-medium py-2 rounded-lg hover:bg-brand-800 transition-colors duration-200 text-center
     }
 }
+
+@layer utilities {
+    .shadow-t {
+        @apply shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]
+    }
+}
+
+@layer utilities {
+    .bg-parallax {
+        background-image: url('/donate-background.png');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
