@@ -7,7 +7,7 @@ interface Props {
 
 export default function Carousel({ emblaRef }: Props) {
     return (
-        <div className="overflow-hidden w-full h-full" ref={emblaRef}>
+        <div className="max-md:flex-1 max-md:min-h-0 overflow-hidden w-full h-full" ref={emblaRef}>
             <div className="flex h-full">
                 {navItems.map(({ label, imagem }) => (
                     <div key={label} className="flex-[0_0_100%] h-full">
