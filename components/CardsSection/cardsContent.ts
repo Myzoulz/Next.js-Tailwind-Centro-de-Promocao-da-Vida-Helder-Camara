@@ -2,8 +2,8 @@ export type cardContent = { titulo: string; descricao: string; imagem: string };
 
 export const cardsContent: cardContent[] = [
     { titulo: "Psicomotricidade", descricao: "Acompanhamento psicológico para crianças neurodivergentes.", imagem: "/imagesCards/psicomotricidade.jpg" },
-    { titulo: "Reforço Escolar", descricao: "Apoio de aprendizado escolar para crianças que estudam na rede pública.", imagem: "/imagesCards/placeholder.png" },
-    { titulo: "Consultas Psicológicas", descricao: "Acompanhamento psicológico gratuito para a comunidade.", imagem: "/imagesCards/placeholder.png" },
+    { titulo: "Reforço Escolar", descricao: "Apoio de aprendizado escolar para crianças que estudam na rede pública.", imagem: "/imagesCards/reforco-escolar.jpeg" },
+    { titulo: "Consultas Psicológicas", descricao: "Acompanhamento psicológico gratuito para a comunidade.", imagem: "/imagesCards/consultas-psicologicas.jpeg" },
     { titulo: "Ballet Clássico", descricao: "Aulas de ballet Clássico gratuito para crianças e adolescentes.", imagem: "/imagesCards/ballet-classico.jpg" },
     { titulo: "Estudo Bíblico", descricao: "Momentos de conhecimento e estudo religioso na instituição.", imagem: "/imagesCards/estudo-biblico.jpeg" },
     { titulo: "Capoeira", descricao: "Aulas gratuitas de capoeira para todas as idades.", imagem: "/imagesCards/capoeira.jpeg" },

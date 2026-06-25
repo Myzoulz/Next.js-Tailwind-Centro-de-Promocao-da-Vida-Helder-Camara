@@ -9,7 +9,7 @@ import { navItems } from "./navItems";
 
 export default function Hero() {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 5000 })]);
-    const [selected, setSelected] = useState("Educação");
+    const [selected, setSelected] = useState("Cultura");
 
     useEffect(() => {
         if (!emblaApi) return;
