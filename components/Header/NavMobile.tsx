@@ -12,22 +12,22 @@ export default function NavMobile({ open, onToggle, onClose }: NavMobileProps) {
     return (
         <>
             <button
-                className="lg:hidden text-amber-200 hover:text-amber-300 transition-colors"
+                className="fixed lg:hidden bottom-6 right-6 z-50 bg-brand-900 text-amber-200 p-3 rounded-full shadow-lg shadow-brand-700/45 hover:bg-brand-800 hover:text-amber-300 transition-all duration-200"
                 onClick={onToggle}
                 aria-label="Abrir menu"
             >
-                {open ? <X size={32} /> : <Menu size={32} />}
+                {open ? <X size={28} /> : <Menu size={28} />}
             </button>
 
             {open && (
-                <div className="absolute top-28 left-0 w-full bg-brand-950 border-t border-zinc-100 lg:hidden z-50">
-                    <nav className="flex flex-col px-6 pb-4">
+                <div className="fixed inset-0 bg-brand-950/95 lg:hidden z-40 flex flex-col items-center justify-center">
+                    <nav className="flex flex-col items-center gap-6">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.href + link.label}
                                 href={link.href}
                                 onClick={onClose}
-                                className="py-3 text-lg font-medium text-zinc-100 hover:text-amber-100 border-b border-zinc-100 last:border-none transition-colors duration-200"
+                                className="text-2xl font-medium text-zinc-100 hover:text-amber-100 transition-colors duration-200"
                             >
                                 {link.label}
                             </Link>
