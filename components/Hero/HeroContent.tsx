@@ -9,7 +9,7 @@ interface Props {
 
 export default function HeroContent({ selected, onSelect }: Props) {
     return (
-        <section className="h-full flex flex-col justify-center gap-4 px-12 overflow-hidden">
+        <section className="max-md:shrink-0 md:h-full flex flex-col justify-center gap-4 px-12 overflow-hidden">
             <button
                 className="bg-amber-300 hover:bg-amber-400/80 py-2 px-4 rounded-full mt-12 cursor-pointer animate-fadeSlide [animation-duration:2000ms] self-start"
                 onClick={() => window.open('https://maps.app.goo.gl/q5sFNZhgGDZAsymM6', '_blank')}
