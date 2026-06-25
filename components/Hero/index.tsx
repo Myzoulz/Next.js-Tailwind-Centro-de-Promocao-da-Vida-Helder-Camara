@@ -26,7 +26,7 @@ export default function Hero() {
 
     return (
         <main>
-            <section className="h-[calc(100dvh-112px)] w-full flex items-center">
+            <section className="h-[calc(100svh-112px)] w-full flex items-center">
                 <div className="w-full h-full flex flex-col md:flex-row">
                     <HeroContent selected={selected} onSelect={handleSelect} />
                     <Carousel emblaRef={emblaRef} />
