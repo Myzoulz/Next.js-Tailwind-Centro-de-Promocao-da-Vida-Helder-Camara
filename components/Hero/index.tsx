@@ -33,7 +33,7 @@ export default function Hero() {
                 </div>
             </section>
 
-            <div className="md:hidden px-8 mt-6 flex flex-col max-h-[35vh]">
+            <div className="md:hidden px-8 mt-6 flex flex-col max-h-[65vh]">
                 <HeroNav selected={selected} onSelect={handleSelect} />
             </div>
         </main>
