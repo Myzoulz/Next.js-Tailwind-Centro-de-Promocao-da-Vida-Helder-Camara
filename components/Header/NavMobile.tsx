@@ -27,7 +27,7 @@ export default function NavMobile({ open, onToggle, onClose }: NavMobileProps) {
                                 key={link.href + link.label}
                                 href={link.href}
                                 onClick={onClose}
-                                className="text-2xl font-medium text-zinc-100 hover:text-amber-100 transition-colors duration-200"
+                                className="text-2xl font-medium text-amber-100 hover:text-yellow-200 transition-colors duration-200"
                             >
                                 {link.label}
                             </Link>

@@ -13,7 +13,7 @@ export default function DonateSection() {
                 backgroundAttachment: "fixed"
             }}
         >
-            <div className="flex flex-col justify-center items-center h-full gap-4 bg-brand-900/40 text-zinc-100">
+            <div className="flex flex-col justify-center items-center h-full gap-4 bg-brand-900/40 text-amber-300">
                 <h2 className="main-texts leading-normal">Contribua com a organização</h2>
                 <h1 className="text-3xl font-sans font-semibold text-zinc-100">Doar é um ato de amor</h1>
                 <Heart />

@@ -92,7 +92,7 @@
 
 @layer components {
     .default-btn {
-        @apply cursor-pointer mt-2 block w-full bg-brand-700 text-white text-sm font-medium py-2 rounded-lg hover:bg-brand-800 transition-colors duration-200 text-center
+        @apply cursor-pointer mt-2 block w-full bg-brand-800 text-amber-200 text-sm font-bold py-2 rounded-lg hover:bg-brand-900 transition-colors duration-200 text-center
     }
 }
 
