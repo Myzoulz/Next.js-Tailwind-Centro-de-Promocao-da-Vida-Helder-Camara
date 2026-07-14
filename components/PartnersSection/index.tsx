@@ -6,7 +6,7 @@ export default function PartnersSection() {
             <h2 className="text-center text-3xl font-bold mb-8 text-gray-900">
                 Parcerias
             </h2>
-            <div className="max-w-3xl mx-auto grid grid-cols-3 gap-10">
+            <div className="max-w-6xl mx-auto grid grid-cols-4 gap-10">
                 {partners.map((partner) => (
                     <a
                         key={partner.titulo}
