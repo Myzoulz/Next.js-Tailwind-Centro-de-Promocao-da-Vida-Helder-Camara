@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import HeroNav from "./HeroNav";
 import { Heart } from "lucide-react";
 
@@ -23,12 +24,12 @@ export default function HeroContent({ selected, onSelect }: Props) {
                 Há 26 anos atuando diariamente construindo oportunidades com amor e solidariedade para a comunidade do Genibaú e região
             </h2>
             <div className="flex flex-row gap-4 mb-4 text-base lg:text-xl font-semibold shrink-0">
-                <button className="bg-brand-900 hover:bg-brand-950 text-white py-2 px-4 rounded-lg cursor-pointer animate-zoomIn">
+                <Link href="/about" className="bg-brand-900 hover:bg-brand-950 text-white py-2 px-4 rounded-lg cursor-pointer animate-zoomIn">
                     <span>Conheça</span>
-                </button>
-                <button className="bg-amber-300 hover:bg-amber-400/80 text-brand-900 py-2 px-4 rounded-lg cursor-pointer animate-zoomIn">
+                </Link>
+                <Link href="/donate" className="bg-amber-300 hover:bg-amber-400/80 text-brand-900 py-2 px-4 rounded-lg cursor-pointer animate-zoomIn">
                     <span className="flex items-center gap-1.5">Como Doar <Heart className="w-4 h-4" /></span>
-                </button>
+                </Link>
             </div>
             <div className="hidden md:flex flex-col min-h-0 flex-1 overflow-hidden">
                 <HeroNav selected={selected} onSelect={onSelect} />
