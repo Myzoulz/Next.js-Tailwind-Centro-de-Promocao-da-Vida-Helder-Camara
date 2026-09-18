@@ -8,9 +8,9 @@ export type DonationCurrency = {
 };
 
 export const donationCurrencies: DonationCurrency[] = [
-    { code: "brl", symbol: "R$", label: "Real (BRL)", min: 1, max: 10000, decimals: 2 },
-    { code: "usd", symbol: "US$", label: "Dólar (USD)", min: 1, max: 2000, decimals: 2 },
-    { code: "eur", symbol: "€", label: "Euro (EUR)", min: 1, max: 2000, decimals: 2 },
+    { code: "brl", symbol: "R$", label: "Real (BRL)", min: 1, max: 50000, decimals: 2 },
+    { code: "usd", symbol: "US$", label: "Dólar (USD)", min: 1, max: 10000, decimals: 2 },
+    { code: "eur", symbol: "€", label: "Euro (EUR)", min: 1, max: 10000, decimals: 2 },
 ];
 
 export function getCurrency(code: string): DonationCurrency | undefined {
