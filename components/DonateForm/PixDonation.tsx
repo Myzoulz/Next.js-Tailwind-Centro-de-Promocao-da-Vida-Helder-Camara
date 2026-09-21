@@ -38,9 +38,9 @@ export default function PixDonation() {
                     <button
                         type="button"
                         onClick={handleCopy}
-                        className="flex items-center gap-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-700 text-sm font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
+                        className="flex items-center gap-2 bg-brand-800 hover:bg-brand-900 text-amber-200 text-sm font-semibold py-2 px-4 rounded-lg transition-colors duration-200 cursor-pointer"
                     >
-                        {copied ? <Check className="w-4 h-4 text-green-600" /> : <Copy className="w-4 h-4" />}
+                        {copied ? <Check className="w-4 h-4 text-amber-200" /> : <Copy className="w-4 h-4" />}
                         {copied ? "Código Pix copiado!" : "Copiar código Pix"}
                     </button>
                 )}
