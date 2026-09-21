@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { cardsContent } from "@/components/CardsSection/cardsContent";
+import { cardsContent } from "@/constants/cardsContent";
 import { phone } from "@/constants/phone";
 
 export default function AtividadesPage() {
@@ -40,7 +40,7 @@ export default function AtividadesPage() {
                                     <div className="absolute inset-0 bg-gradient-to-t from-brand-900/70 to-transparent" />
                                     <span className="absolute bottom-3 left-3 text-amber-300 font-semibold text-sm tracking-wide uppercase flex items-center gap-2">
                                         <span className="w-3 h-3 rounded-full bg-amber-300" />
-                                        {card.titulo}
+                                        {card.status}
                                     </span>
                                 </div>
 

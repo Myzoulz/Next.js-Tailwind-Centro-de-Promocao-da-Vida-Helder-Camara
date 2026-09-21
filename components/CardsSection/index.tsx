@@ -2,7 +2,7 @@
 
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { cardsContent } from "./cardsContent";
+import { cardsContent } from "@/constants/cardsContent";
 import Card from "./Cards";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 

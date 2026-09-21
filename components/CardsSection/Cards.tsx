@@ -1,5 +1,5 @@
 import { phone } from "@/constants/phone";
-import { cardContent } from "./cardsContent";
+import { cardContent } from "@/constants/cardsContent";
 
 export default function Card({ titulo, descricao, imagem }: cardContent) {
     const mensagem = `Olá, gostaria de me informar sobre ${titulo}!`;
