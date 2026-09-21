@@ -11,8 +11,7 @@ export default function DonatePage() {
                 }}
             >
                 <div className="flex flex-col justify-center items-center bg-brand-900/40 h-full py-16 px-6 text-center">
-                    <h2 className="text-sm font-semibold uppercase tracking-widest text-zinc-100 mb-2">Doação</h2>
-                    <h1 className="text-4xl font-bold max-w-3xl mx-auto leading-tight text-amber-300">Doar é um ato de amor</h1>
+                    <h1 className="text-4xl font-bold max-w-3xl mx-auto leading-tight text-amber-200">Doar é um ato de amor</h1>
                     <p className="text-zinc-100 text-lg mt-4 max-w-2xl mx-auto leading-relaxed">
                         Sua contribuição mantém as portas do CPVHC abertas para a comunidade do Parque Genibaú:
                         reforço escolar, balé clássico, atendimento psicológico, fisioterapia, oficinas culturais e o

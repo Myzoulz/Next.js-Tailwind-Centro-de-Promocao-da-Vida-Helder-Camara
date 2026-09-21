@@ -29,8 +29,7 @@ export default function AboutPage() {
                 }}
             >
                 <div className="flex flex-col justify-center items-center bg-brand-900/40 h-full py-16 px-6 text-center">
-                    <h2 className="text-sm font-semibold uppercase tracking-widest text-amber-300 mb-2">Sobre</h2>
-                    <h1 className="text-4xl font-bold max-w-2xl mx-auto leading-tight text-zinc-100">
+                    <h1 className="text-4xl font-bold max-w-2xl mx-auto leading-tight text-amber-200">
                         Conheça a história do Centro de Promoção da Vida Hélder Câmara
                     </h1>
                 </div>
