@@ -176,7 +176,7 @@ export default function DonateForm() {
                         </p>
                         <p className="flex items-center gap-1">
                             <span className="inline-block w-2 h-2 rounded-full bg-amber-400" />
-                            Confira o beneficiário <strong>Centro de Promoção da Vida Hélder Câmara</strong> antes de
+                            Confira o beneficiário <strong>CPVHC</strong> antes de
                             confirmar a transferência.
                         </p>
                     </div>
