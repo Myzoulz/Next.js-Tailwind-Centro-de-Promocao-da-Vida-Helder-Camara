@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
+import { CreditCard, QrCode } from "lucide-react";
 import { donationCurrencies, getCurrency, parseAmountToMinorUnits, type DonationCurrency } from "@/constants/donation";
+import PixDonation from "./PixDonation";
 
 function detectCurrency(): DonationCurrency["code"] {
     if (typeof navigator === "undefined") return "brl";
@@ -15,6 +17,7 @@ function detectCurrency(): DonationCurrency["code"] {
 }
 
 export default function DonateForm() {
+    const [method, setMethod] = useState<"cartao" | "pix">("cartao");
     const [currencyCode, setCurrencyCode] = useState<DonationCurrency["code"]>(detectCurrency);
     const [amount, setAmount] = useState("");
     const [loading, setLoading] = useState(false);
@@ -69,73 +72,116 @@ export default function DonateForm() {
 
     return (
         <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 border border-zinc-200 flex flex-col gap-6">
-            <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-                <div className="flex flex-col gap-2">
-                    <label htmlFor="currency" className="text-sm font-semibold text-zinc-700">
-                        Moeda
-                    </label>
-                    <select
-                        id="currency"
-                        value={currency.code}
-                        onChange={(event) => setCurrencyCode(event.target.value as DonationCurrency["code"])}
-                        className="w-full border border-zinc-300 rounded-lg px-4 py-3 bg-white text-zinc-800 focus:outline-none focus:ring-2 focus:ring-brand-800"
-                    >
-                        {donationCurrencies.map((option) => (
-                            <option key={option.code} value={option.code}>
-                                {option.label}
-                            </option>
-                        ))}
-                    </select>
-                </div>
-
-                <div className="flex flex-col gap-2">
-                    <label htmlFor="amount" className="text-sm font-semibold text-zinc-700">
-                        Valor da doação
-                    </label>
-                    <div className="relative">
-                        <span className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500 font-semibold">
-                            {currency.symbol}
-                        </span>
-                        <input
-                            id="amount"
-                            type="text"
-                            inputMode="decimal"
-                            value={amount}
-                            onChange={(event) => setAmount(event.target.value)}
-                            placeholder={currency.decimals === 2 ? "0,00" : "0"}
-                            className="w-full border border-zinc-300 rounded-lg pl-12 pr-4 py-3 bg-white text-zinc-800 focus:outline-none focus:ring-2 focus:ring-brand-800"
-                        />
-                    </div>
-                    {preview && (
-                        <p className="text-xs text-zinc-500">
-                            Você doará: <span className="font-semibold text-zinc-700">{preview}</span>
-                        </p>
-                    )}
-                </div>
-
-                {error && (
-                    <p className="text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg px-4 py-3">{error}</p>
-                )}
-
+            <div className="grid grid-cols-2 gap-2 bg-zinc-100 rounded-lg p-1">
                 <button
-                    type="submit"
-                    disabled={loading}
-                    className="bg-brand-800 text-amber-200 text-lg font-bold py-3 rounded-lg hover:bg-brand-900 transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
+                    type="button"
+                    onClick={() => setMethod("cartao")}
+                    className={`flex items-center justify-center gap-2 rounded-lg py-2.5 text-sm font-semibold transition-colors duration-200 cursor-pointer ${
+                        method === "cartao" ? "bg-brand-800 text-amber-200" : "text-zinc-600 hover:bg-zinc-200"
+                    }`}
                 >
-                    {loading ? "Aguarde..." : "Doar agora"}
+                    <CreditCard className="w-4 h-4" />
+                    Cartão
                 </button>
-            </form>
-
-            <div className="flex flex-col gap-2 text-xs text-zinc-500 border-t border-zinc-200 pt-4">
-                <p>
-                    O valor é cobrado na moeda escolhida. A conversão para reais (BRL) é feita automaticamente pelo
-                    Stripe após a doação.
-                </p>
-                <p className="flex items-center gap-1">
-                    <span className="inline-block w-2 h-2 rounded-full bg-amber-400" />
-                    Pagamento seguro processado pela Stripe. Nenhum dado de cartão é armazenado por nós.
-                </p>
+                <button
+                    type="button"
+                    onClick={() => setMethod("pix")}
+                    className={`flex items-center justify-center gap-2 rounded-lg py-2.5 text-sm font-semibold transition-colors duration-200 cursor-pointer ${
+                        method === "pix" ? "bg-brand-800 text-amber-200" : "text-zinc-600 hover:bg-zinc-200"
+                    }`}
+                >
+                    <QrCode className="w-4 h-4" />
+                    Pix
+                </button>
             </div>
+
+            {method === "cartao" ? (
+                <>
+                    <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+                        <div className="flex flex-col gap-2">
+                            <label htmlFor="currency" className="text-sm font-semibold text-zinc-700">
+                                Moeda
+                            </label>
+                            <select
+                                id="currency"
+                                value={currency.code}
+                                onChange={(event) => setCurrencyCode(event.target.value as DonationCurrency["code"])}
+                                className="w-full border border-zinc-300 rounded-lg px-4 py-3 bg-white text-zinc-800 focus:outline-none focus:ring-2 focus:ring-brand-800"
+                            >
+                                {donationCurrencies.map((option) => (
+                                    <option key={option.code} value={option.code}>
+                                        {option.label}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+
+                        <div className="flex flex-col gap-2">
+                            <label htmlFor="amount" className="text-sm font-semibold text-zinc-700">
+                                Valor da doação
+                            </label>
+                            <div className="relative">
+                                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500 font-semibold">
+                                    {currency.symbol}
+                                </span>
+                                <input
+                                    id="amount"
+                                    type="text"
+                                    inputMode="decimal"
+                                    value={amount}
+                                    onChange={(event) => setAmount(event.target.value)}
+                                    placeholder={currency.decimals === 2 ? "0,00" : "0"}
+                                    className="w-full border border-zinc-300 rounded-lg pl-12 pr-4 py-3 bg-white text-zinc-800 focus:outline-none focus:ring-2 focus:ring-brand-800"
+                                />
+                            </div>
+                            {preview && (
+                                <p className="text-xs text-zinc-500">
+                                    Você doará: <span className="font-semibold text-zinc-700">{preview}</span>
+                                </p>
+                            )}
+                        </div>
+
+                        {error && (
+                            <p className="text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg px-4 py-3">{error}</p>
+                        )}
+
+                        <button
+                            type="submit"
+                            disabled={loading}
+                            className="bg-brand-800 text-amber-200 text-lg font-bold py-3 rounded-lg hover:bg-brand-900 transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
+                        >
+                            {loading ? "Aguarde..." : "Doar agora"}
+                        </button>
+                    </form>
+
+                    <div className="flex flex-col gap-2 text-xs text-zinc-500 border-t border-zinc-200 pt-4">
+                        <p>
+                            O valor é cobrado na moeda escolhida. A conversão para reais (BRL) é feita automaticamente pelo
+                            Stripe após a doação.
+                        </p>
+                        <p className="flex items-center gap-1">
+                            <span className="inline-block w-2 h-2 rounded-full bg-amber-400" />
+                            Pagamento seguro processado pela Stripe. Nenhum dado de cartão é armazenado por nós.
+                        </p>
+                    </div>
+                </>
+            ) : (
+                <>
+                    <PixDonation />
+
+                    <div className="flex flex-col gap-2 text-xs text-zinc-500 border-t border-zinc-200 pt-4">
+                        <p>
+                            O valor da doação é informado por você no app do seu banco. O pagamento cai{" "}
+                            <strong>direto na conta da ONG (Bradesco)</strong>, sem taxas de cartão.
+                        </p>
+                        <p className="flex items-center gap-1">
+                            <span className="inline-block w-2 h-2 rounded-full bg-amber-400" />
+                            Confira o beneficiário <strong>Centro de Promoção da Vida Hélder Câmara</strong> antes de
+                            confirmar a transferência.
+                        </p>
+                    </div>
+                </>
+            )}
         </div>
     );
 }
