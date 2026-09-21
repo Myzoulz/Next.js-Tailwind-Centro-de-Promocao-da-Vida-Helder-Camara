@@ -15,7 +15,7 @@ export default function DonatePage() {
 
             <section className="max-w-6xl mx-auto px-6 py-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-                    <div className="flex flex-col gap-6">
+                    <div className="flex flex-col gap-6 order-2 md:order-none">
                         <div className="flex flex-col gap-3">
                             <h2 className="text-2xl font-bold text-brand-800">O que sua doação realiza</h2>
                             <ul className="flex flex-col gap-3 text-zinc-600 leading-relaxed">
@@ -48,7 +48,7 @@ export default function DonatePage() {
                         </div>
                     </div>
 
-                    <div className="md:sticky md:top-6">
+                    <div className="md:sticky md:top-6 order-1 md:order-none">
                         <DonateForm />
                     </div>
                 </div>
