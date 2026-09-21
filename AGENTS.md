@@ -6,6 +6,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 # Workflow de Git
 
+- **Nunca fazer commit, push, abrir PR ou fazer deploy sem o usuário pedir explicitamente.**
 - **Mudanças pequenas** (correções de design, bugs pontuais, ajustes de UI/estilo, docs) podem ser commitadas **direto na `main`** e enviadas com `git push`.
 - **Mudanças maiores** (features, refatorações, integrações) seguem **branch + PR**:
   1. criar branch descritiva a partir de `main`;
