@@ -3,14 +3,22 @@ import DonateForm from "@/components/DonateForm";
 export default function DonatePage() {
     return (
         <main className="bg-zinc-100 text-zinc-800">
-            <section className="bg-brand-800 text-zinc-100 py-16 px-6 text-center">
-                <h2 className="text-sm font-semibold uppercase tracking-widest text-amber-300 mb-2">Doação</h2>
-                <h1 className="text-4xl font-bold max-w-3xl mx-auto leading-tight">Doar é um ato de amor</h1>
-                <p className="text-zinc-300 text-lg mt-4 max-w-2xl mx-auto leading-relaxed">
-                    Sua contribuição mantém as portas do CPVHC abertas para a comunidade do Parque Genibaú:
-                    reforço escolar, balé clássico, atendimento psicológico, fisioterapia, oficinas culturais e o
-                    programa Ceará Sem Fome.
-                </p>
+            <section
+                className="relative bg-parallax overflow-hidden"
+                style={{
+                    backgroundImage: "url('/donate-background.png')",
+                    backgroundAttachment: "fixed"
+                }}
+            >
+                <div className="flex flex-col justify-center items-center bg-brand-900/40 h-full py-16 px-6 text-center">
+                    <h2 className="text-sm font-semibold uppercase tracking-widest text-amber-300 mb-2">Doação</h2>
+                    <h1 className="text-4xl font-bold max-w-3xl mx-auto leading-tight text-zinc-100">Doar é um ato de amor</h1>
+                    <p className="text-zinc-100 text-lg mt-4 max-w-2xl mx-auto leading-relaxed">
+                        Sua contribuição mantém as portas do CPVHC abertas para a comunidade do Parque Genibaú:
+                        reforço escolar, balé clássico, atendimento psicológico, fisioterapia, oficinas culturais e o
+                        programa Ceará Sem Fome.
+                    </p>
+                </div>
             </section>
 
             <section className="max-w-6xl mx-auto px-6 py-16">

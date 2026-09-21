@@ -21,11 +21,19 @@ export default function AboutPage() {
     return (
         <main className="bg-zinc-100 text-zinc-800">
 
-            <section className="bg-brand-800 text-zinc-100 py-16 px-6 text-center">
-                <h2 className="text-sm font-semibold uppercase tracking-widest text-amber-300 mb-2">Sobre</h2>
-                <h1 className="text-4xl font-bold max-w-2xl mx-auto leading-tight">
-                    Conheça a história do Centro de Promoção da Vida Hélder Câmara
-                </h1>
+            <section
+                className="relative bg-parallax overflow-hidden"
+                style={{
+                    backgroundImage: "url('/donate-background.png')",
+                    backgroundAttachment: "fixed"
+                }}
+            >
+                <div className="flex flex-col justify-center items-center bg-brand-900/40 h-full py-16 px-6 text-center">
+                    <h2 className="text-sm font-semibold uppercase tracking-widest text-amber-300 mb-2">Sobre</h2>
+                    <h1 className="text-4xl font-bold max-w-2xl mx-auto leading-tight text-zinc-100">
+                        Conheça a história do Centro de Promoção da Vida Hélder Câmara
+                    </h1>
+                </div>
             </section>
 
             <section className="max-w-7xl mx-auto px-6 py-16 flex flex-col gap-12">
