@@ -61,8 +61,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og-image.png",
-        width: 1200,
-        height: 630,
+        width: 1731,
+        height: 909,
         alt: "Centro de Promoção da Vida Hélder Câmara (CPVHC)",
       },
     ],
