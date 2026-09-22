@@ -20,7 +20,7 @@ export default function PixDonation() {
     return (
         <div className="flex flex-col items-center gap-5">
             <div className="flex flex-col items-center gap-3">
-                <div className="bg-white border border-zinc-300 rounded-xl p-3">
+                <div className="bg-white border border-brand-800 rounded-xl p-2">
                     <img src={pixQrImage} alt="QR Code Pix do CPVHC" className="w-56 h-56" />
                 </div>
                 <p className="font-semibold text-zinc-700 text-center">
