@@ -1,3 +1,5 @@
+import Collage from "@/components/VoluntariadoSection/Collage";
+
 const formularioUrl = "https://docs.google.com/forms/d/e/1FAIpQLSc4FoX1JvP7dZhs1Afkc_1WSmVRYXqER4YnAEx0lQNbirKAuA/viewform";
 
 export const metadata = {
@@ -26,8 +28,9 @@ export default function VoluntariadoPage() {
                 </div>
             </section>
 
-            <section className="max-w-5xl mx-auto px-6 py-16 flex justify-center">
-                <div className="w-full flex flex-col gap-4 border-l-4 border-brand-950 bg-amber-50 rounded-xl py-6 px-6 md:px-10">
+            <section className="py-16 flex flex-wrap gap-10 justify-center items-center px-4 lg:px-6">
+                <Collage />
+                <div className="flex flex-col gap-4 w-full max-w-xl border-l-4 border-brand-950 bg-amber-50 rounded-xl py-6 px-6 md:px-10">
                     <p className="font-serif italic text-xl text-stone-600 leading-relaxed xl:text-2xl">
                         O voluntariado é a força que move o CPVHC. Seja compartilhando seu tempo, seu
                         conhecimento ou sua experiência, você ajuda a manter as portas abertas para a
