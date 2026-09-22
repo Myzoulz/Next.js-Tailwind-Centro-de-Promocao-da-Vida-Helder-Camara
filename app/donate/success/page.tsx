@@ -1,5 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Heart } from "lucide-react";
+
+export const metadata: Metadata = {
+    robots: {
+        index: false,
+        follow: false,
+    },
+    title: "Obrigado pela sua doação",
+};
 
 export default function DonateSuccessPage() {
     return (

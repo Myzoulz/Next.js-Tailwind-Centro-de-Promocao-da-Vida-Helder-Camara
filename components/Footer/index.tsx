@@ -14,8 +14,8 @@ export default function Footer() {
             <ContactFooter />
 
             <div className="col-span-1 sm:col-span-2 text-center lg:col-span-1 lg:col-start-1 lg:row-start-2 lg:text-left lg:self-start">
-                <h1 className="text-zinc-500">Centro de Promoção da Vida Hélder Câmara © 2026. Todos os Direitos Reservados.</h1>
-                <h2 className="text-zinc-400">CNPJ: 03778.345/0001-69</h2>
+                <p className="text-zinc-500">Centro de Promoção da Vida Hélder Câmara © 2026. Todos os Direitos Reservados.</p>
+                <p className="text-zinc-400">CNPJ: 03778.345/0001-69</p>
             </div>
         </footer>
     );
