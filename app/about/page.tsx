@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Sobre — Nossa História",
+    description:
+        "Conheça a história do Centro de Promoção da Vida Hélder Câmara (CPVHC), ONG criada em 2000 no Parque Genibaú, em Fortaleza-CE, para promover vida, direitos e oportunidades para a comunidade.",
+};
+
 const atividades = [
     "Balé clássico",
     "Reforço escolar",

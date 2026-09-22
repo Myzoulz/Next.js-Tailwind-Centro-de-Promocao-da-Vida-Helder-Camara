@@ -12,10 +12,10 @@ function DataCard({ card }: { card: typeof dataContent[number] }) {
                 className={`text-amber-200 w-15 h-15 mb-2 zoom-on-hover ${inView ? "animate-zoomIn" : "invisible"
                     }`}
             />
-            <h1 className="text-xl font-bold">
+            <h2 className="text-xl font-bold">
                 +{inView && <CountUp end={parseInt(card.numero.replace(/\D/g, ""))} duration={2} />}
-            </h1>
-            <h2 className="text-zinc-300 text-lg font-semibold">{card.titulo}</h2>
+            </h2>
+            <p className="text-zinc-300 text-lg font-semibold">{card.titulo}</p>
         </div>
     );
 }

@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import DonateForm from "@/components/DonateForm";
+
+export const metadata: Metadata = {
+    title: "Doações",
+    description:
+        "Faça uma doação ao CPVHC e ajude a manter as portas do Centro de Promoção da Vida Hélder Câmara abertas para a comunidade do Parque Genibaú: reforço escolar, balé clássico, atendimento psicológico, fisioterapia e o programa Ceará Sem Fome.",
+};
 
 export default function DonatePage() {
     return (
