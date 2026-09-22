@@ -19,22 +19,22 @@ const siteUrl = "https://www.cpvheldercamara.org.br";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "CPVHC â€” Centro de PromoÃ§Ã£o da Vida HÃ©lder CÃ¢mara",
+    default: "CPVHC — Centro de Promoção da Vida Hélder Câmara",
     template: "%s | CPVHC",
   },
   description:
-    "ONG em Fortaleza-CE que hÃ¡ 26 anos promove cultura, educaÃ§Ã£o, saÃºde, esporte e seguranÃ§a alimentar para a comunidade do Parque GenibaÃº e regiÃ£o. ConheÃ§a nossas atividades e contribua.",
+    "ONG em Fortaleza-CE que há 26 anos promove cultura, educação, saúde, esporte e segurança alimentar para a comunidade do Parque Genibaú e região. Conheça nossas atividades e contribua.",
   keywords: [
     "CPVHC",
-    "Centro de PromoÃ§Ã£o da Vida HÃ©lder CÃ¢mara",
+    "Centro de Promoção da Vida Hélder Câmara",
     "ONG Fortaleza",
-    "ONG Parque GenibaÃº",
-    "doaÃ§Ã£o Fortaleza",
+    "ONG Parque Genibaú",
+    "doação Fortaleza",
     "projeto social Fortaleza",
-    "balÃ© clÃ¡ssico gratuito",
-    "reforÃ§o escolar",
-    "CearÃ¡ Sem Fome",
-    "HÃ©lder CÃ¢mara",
+    "balé clássico gratuito",
+    "reforço escolar",
+    "Ceará Sem Fome",
+    "Hélder Câmara",
   ],
   alternates: {
     canonical: "/",
@@ -54,24 +54,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: siteUrl,
-    siteName: "CPVHC â€” Centro de PromoÃ§Ã£o da Vida HÃ©lder CÃ¢mara",
-    title: "CPVHC â€” Centro de PromoÃ§Ã£o da Vida HÃ©lder CÃ¢mara",
+    siteName: "CPVHC — Centro de Promoção da Vida Hélder Câmara",
+    title: "CPVHC — Centro de Promoção da Vida Hélder Câmara",
     description:
-      "ONG em Fortaleza-CE que hÃ¡ 26 anos promove cultura, educaÃ§Ã£o, saÃºde, esporte e seguranÃ§a alimentar para a comunidade do Parque GenibaÃº e regiÃ£o.",
+      "ONG em Fortaleza-CE que há 26 anos promove cultura, educação, saúde, esporte e segurança alimentar para a comunidade do Parque Genibaú e região.",
     images: [
       {
         url: "/og-image.png",
         width: 1731,
         height: 909,
-        alt: "Centro de PromoÃ§Ã£o da Vida HÃ©lder CÃ¢mara (CPVHC)",
+        alt: "Centro de Promoção da Vida Hélder Câmara (CPVHC)",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "CPVHC â€” Centro de PromoÃ§Ã£o da Vida HÃ©lder CÃ¢mara",
+    title: "CPVHC — Centro de Promoção da Vida Hélder Câmara",
     description:
-      "ONG em Fortaleza-CE que hÃ¡ 26 anos promove cultura, educaÃ§Ã£o, saÃºde, esporte e seguranÃ§a alimentar para a comunidade do Parque GenibaÃº e regiÃ£o.",
+      "ONG em Fortaleza-CE que há 26 anos promove cultura, educação, saúde, esporte e segurança alimentar para a comunidade do Parque Genibaú e região.",
     images: ["/og-image.png"],
   },
 };
@@ -80,13 +80,13 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NGO",
   "@id": `${siteUrl}/#organization`,
-  name: "Centro de PromoÃ§Ã£o da Vida HÃ©lder CÃ¢mara",
+  name: "Centro de Promoção da Vida Hélder Câmara",
   alternateName: "CPVHC",
   url: siteUrl,
   logo: `${siteUrl}/logo.png`,
   slogan: "Fortalecendo vidas e inspirando futuros",
   description:
-    "ONG em Fortaleza-CE que hÃ¡ 26 anos promove cultura, educaÃ§Ã£o, saÃºde, esporte e seguranÃ§a alimentar para a comunidade do Parque GenibaÃº e regiÃ£o.",
+    "ONG em Fortaleza-CE que há 26 anos promove cultura, educação, saúde, esporte e segurança alimentar para a comunidade do Parque Genibaú e região.",
   foundingDate: "2000-01-23",
   identifier: "03.778.345/0001-69",
   email: "domheldercamara13@yahoo.com.br",
@@ -100,7 +100,7 @@ const jsonLd = {
   },
   areaServed: {
     "@type": "Place",
-    name: "Parque GenibaÃº e regiÃ£o, Fortaleza-CE",
+    name: "Parque Genibaú e região, Fortaleza-CE",
   },
   sameAs: ["https://www.instagram.com/centrodomheldercamara/"],
 };
