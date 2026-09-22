@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = "https://www.cpvheldarcamara.org.br";
+const siteUrl = "https://www.cpvheldercamara.org.br";
 
 export default function robots(): MetadataRoute.Robots {
     return {
