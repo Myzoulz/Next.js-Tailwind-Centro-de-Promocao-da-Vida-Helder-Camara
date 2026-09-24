@@ -10,6 +10,12 @@ function detectCurrency(): DonationCurrency["code"] {
 
     if (lang.startsWith("pt")) return "brl";
 
+    if (lang.startsWith("es-ar")) return "ars";
+    if (lang.startsWith("es-bo")) return "bob";
+    if (lang.startsWith("es-mx")) return "mxn";
+    if (lang.startsWith("es-co")) return "cop";
+    if (lang.startsWith("es-cl")) return "clp";
+
     const eurozone = ["de", "fr", "it", "es", "nl", "fi", "el", "sk", "si", "lt", "lv", "et", "mt", "pt-pt", "hr", "bg", "ro", "hu", "pl", "cs", "da", "sv"];
     if (eurozone.some((prefix) => lang.startsWith(prefix))) return "eur";
 
