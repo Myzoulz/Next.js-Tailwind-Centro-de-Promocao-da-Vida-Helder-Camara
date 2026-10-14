@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-    title: "Sobre — Nossa História",
-    description:
-        "Conheça a história do Centro de Promoção da Vida Hélder Câmara (CPVHC), ONG criada em 2000 no Parque Genibaú, em Fortaleza-CE, para promover vida, direitos e oportunidades para a comunidade.",
-};
+import { Compass, Eye, HandHeart } from "lucide-react";
+import { AboutAnimatedSection, AboutClosingSection } from './AboutAnimatedSection';
+import AboutActivitiesSection from './AboutActivitiesSection';
 
 const atividades = [
     "Balé clássico",
@@ -25,6 +22,12 @@ const atividades = [
     "Atividades de formação e geração de renda",
 ];
 
+export const metadata: Metadata = {
+    title: "Sobre — Nossa História",
+    description:
+        "Conheça a história do Centro de Promoção da Vida Hélder Câmara (CPVHC), ONG criada em 2000 no Parque Genibaú, em Fortaleza-CE, para promover vida, direitos e oportunidades para a comunidade.",
+};
+
 export default function AboutPage() {
     return (
         <main className="bg-zinc-100 text-zinc-800">
@@ -43,168 +46,53 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            <section className="max-w-7xl mx-auto px-6 py-16 flex flex-col gap-12">
+            <AboutAnimatedSection />
 
-                <div className="flex flex-col md:flex-row gap-8 items-center">
-                    <img
-                        src="/imagesCards/placeholder.png"
-                        alt="História do CPVHC"
-                        className="w-full md:w-1/2 rounded-xl object-cover aspect-video"
-                    />
-                    <div className="flex flex-col gap-4">
-                        <h2 className="text-2xl font-bold text-brand-800">Uma história nascida da necessidade da comunidade</h2>
-                        <p className="text-zinc-600 leading-relaxed">
-                            O Centro de Promoção da Vida Hélder Câmara (CPVHC) foi criado em 23 de janeiro de 2000,
-                            a partir da iniciativa da Equipe Social do bairro Parque Genibaú, em Fortaleza/CE. Naquele
-                            período, a comunidade enfrentava diversas dificuldades relacionadas à ausência de políticas
-                            públicas e serviços essenciais, como falta de água encanada, escolas, posto de saúde,
-                            saneamento básico e infraestrutura adequada.
-                        </p>
+            <AboutActivitiesSection atividades={atividades} />
+
+            <AboutClosingSection />
+
+            <section className="relative bg-parallax overflow-hidden bg-[url('/donate-background.png')] bg-fixed text-zinc-100">
+                <div className="bg-brand-900/60 py-16 px-6">
+                    <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
+
+                        <div className="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-brand-900/50 p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/40 hover:bg-brand-900/70 hover:shadow-xl hover:shadow-black/20">
+                            <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-400/15 text-amber-300 ring-1 ring-amber-300/30 transition-colors duration-300 group-hover:bg-amber-400/25">
+                                <Compass className="h-6 w-6" aria-hidden="true" />
+                            </span>
+                            <h3 className="text-amber-300 font-semibold uppercase tracking-widest text-sm">Propósito</h3>
+                            <p className="leading-relaxed text-zinc-200">
+                                Atuar como espaço comunitário de defesa de direitos, participação popular e promoção da vida,
+                                reconhecendo que todas as pessoas possuem necessidades, mas algumas enfrentam situações de
+                                maior vulnerabilidade.
+                            </p>
+                        </div>
+
+                        <div className="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-brand-900/50 p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/40 hover:bg-brand-900/70 hover:shadow-xl hover:shadow-black/20">
+                            <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-400/15 text-amber-300 ring-1 ring-amber-300/30 transition-colors duration-300 group-hover:bg-amber-400/25">
+                                <HandHeart className="h-6 w-6" aria-hidden="true" />
+                            </span>
+                            <h3 className="text-amber-300 font-semibold uppercase tracking-widest text-sm">Missão</h3>
+                            <p className="leading-relaxed text-zinc-200">
+                                Acolher crianças, adolescentes, jovens, adultos e famílias em situação de vulnerabilidade
+                                social, oferecendo apoio, acolhimento e oportunidades de desenvolvimento humano, social,
+                                educacional, cultural e profissional.
+                            </p>
+                        </div>
+
+                        <div className="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-brand-900/50 p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/40 hover:bg-brand-900/70 hover:shadow-xl hover:shadow-black/20">
+                            <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-400/15 text-amber-300 ring-1 ring-amber-300/30 transition-colors duration-300 group-hover:bg-amber-400/25">
+                                <Eye className="h-6 w-6" aria-hidden="true" />
+                            </span>
+                            <h3 className="text-amber-300 font-semibold uppercase tracking-widest text-sm">Visão</h3>
+                            <p className="leading-relaxed text-zinc-200">
+                                Ser um espaço permanente de acolhimento, aprendizado e transformação social, fortalecendo
+                                vínculos e contribuindo para que moradores do Genibaú e bairros vizinhos tenham acesso a
+                                educação, cultura, professionalização e melhores condições de vida.
+                            </p>
+                        </div>
+
                     </div>
-                </div>
-
-                <div className="flex flex-col md:flex-row-reverse gap-8 items-center">
-                    <img
-                        src="/imagesCards/placeholder.png"
-                        alt="Mobilização comunitária do CPVHC"
-                        className="w-full md:w-1/2 rounded-xl object-cover aspect-video"
-                    />
-                    <div className="flex flex-col gap-4">
-                        <h2 className="text-2xl font-bold text-brand-800">Uma caminhada de mobilização e luta</h2>
-                        <p className="text-zinc-600 leading-relaxed">
-                            Diante dessa realidade, a Equipe Social passou a se reunir para planejar ações coletivas
-                            e organizar momentos de mobilização e luta por melhorias para o território. Dessa caminhada
-                            nasceu o Centro de Promoção da Vida Hélder Câmara, como um espaço comunitário de defesa de
-                            direitos, participação popular e promoção da vida, tendo como missão acolher crianças,
-                            adolescentes, jovens, adultos e famílias em situação de vulnerabilidade social.
-                        </p>
-                        <p className="text-zinc-600 leading-relaxed">
-                            Desde sua criação, o Centro buscou manter suas portas abertas para a comunidade, oferecendo
-                            apoio, acolhimento e oportunidades para aqueles que mais necessitam. A instituição acredita
-                            na força da solidariedade e na importância de construir caminhos coletivos, reconhecendo que
-                            todas as pessoas possuem necessidades, mas algumas enfrentam situações de maior vulnerabilidade.
-                        </p>
-                    </div>
-                </div>
-
-                <div className="flex flex-col md:flex-row gap-8 items-center">
-                    <img
-                        src="/imagesCards/placeholder.png"
-                        alt="Primeiras iniciativas do CPVHC"
-                        className="w-full md:w-1/2 rounded-xl object-cover aspect-video"
-                    />
-                    <div className="flex flex-col gap-4">
-                        <h2 className="text-2xl font-bold text-brand-800">As primeiras iniciativas</h2>
-                        <p className="text-zinc-600 leading-relaxed">
-                            Uma das primeiras iniciativas desenvolvidas pelo Centro de Promoção da Vida Hélder Câmara foi
-                            o fortalecimento de um grupo de mulheres que realizava atividades de crochê, confecção de
-                            roupas e artesanato. Com o crescimento do grupo e o desenvolvimento das habilidades das
-                            participantes, a iniciativa transformou-se em uma cooperativa, possibilitando autonomia,
-                            geração de renda e a criação de um espaço próprio fora do Centro.
-                        </p>
-                    </div>
-                </div>
-
-                <div className="flex flex-col md:flex-row-reverse gap-8 items-center">
-                    <img
-                        src="/imagesCards/placeholder.png"
-                        alt="Atividades educativas e culturais do CPVHC"
-                        className="w-full md:w-1/2 rounded-xl object-cover aspect-video"
-                    />
-                    <div className="flex flex-col gap-4">
-                        <h2 className="text-2xl font-bold text-brand-800">Novas demandas, novas respostas</h2>
-                        <p className="text-zinc-600 leading-relaxed">
-                            Com o passar do tempo, a comunidade também apresentou novas demandas. Famílias começaram a
-                            procurar o CPVHC em busca de atividades para crianças e adolescentes, especialmente por não
-                            possuírem condições financeiras para pagar acompanhamento escolar ou atividades
-                            complementares. Assim, foram iniciadas ações de reforço escolar e balé clássico, garantindo
-                            acesso a atividades culturais e educativas para estudantes da rede pública.
-                        </p>
-                        <p className="text-zinc-600 leading-relaxed">
-                            A instituição também passou a atuar junto aos jovens, diante dos desafios sociais enfrentados
-                            no território, como a violência, a presença de grupos criminosos, a falta de oportunidades e
-                            as condições de extrema pobreza. O Centro de Promoção da Vida Hélder Câmara compreendeu a
-                            necessidade de criar alternativas de formação, convivência, profissionalização e geração de
-                            renda, oferecendo possibilidades para que crianças, adolescentes, jovens e adultos construam
-                            novos projetos de vida.
-                        </p>
-                    </div>
-                </div>
-
-            </section>
-
-            <section className="bg-brand-800 text-zinc-100 py-16 px-6">
-                <div className="max-w-6xl mx-auto flex flex-col gap-8">
-                    <div className="text-center">
-                        <h2 className="text-3xl font-bold mb-3">Atividades desenvolvidas</h2>
-                        <p className="text-zinc-300 leading-relaxed max-w-3xl mx-auto">
-                            Ao longo dos anos, o Centro de Promoção da Vida Hélder Câmara ampliou suas ações e
-                            atualmente desenvolve diversas atividades voltadas ao desenvolvimento humano, social,
-                            educacional, cultural e profissional da comunidade, entre elas:
-                        </p>
-                    </div>
-
-                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-3">
-                        {atividades.map((atividade) => (
-                            <li key={atividade} className="flex items-center gap-3">
-                                <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0" />
-                                <span className="text-zinc-200 leading-relaxed">{atividade}</span>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </section>
-
-            <section className="max-w-7xl mx-auto px-6 py-16">
-                <div className="flex flex-col md:flex-row gap-8 items-center">
-                    <img
-                        src="/imagesCards/placeholder.png"
-                        alt="Comunidade CPVHC"
-                        className="w-full md:w-1/2 rounded-xl object-cover aspect-video"
-                    />
-                    <div className="flex flex-col gap-4">
-                        <h2 className="text-2xl font-bold text-brand-800">Uma história construída em comunidade</h2>
-                        <p className="text-zinc-600 leading-relaxed">
-                            A trajetória do Centro de Promoção da Vida Hélder Câmara é marcada pela participação
-                            comunitária, pela defesa de direitos e pela construção de oportunidades. O Centro permanece
-                            como um espaço de acolhimento, aprendizado e transformação social, fortalecendo vínculos e
-                            contribuindo para que moradores do Genibaú e bairros vizinhos tenham acesso à educação,
-                            cultura, profissionalização e melhores condições de vida.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <section className="bg-brand-900 text-zinc-100 py-16 px-6">
-                <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-
-                    <div className="flex flex-col gap-3 bg-brand-800 rounded-xl p-6">
-                        <h3 className="text-amber-300 font-semibold uppercase tracking-widest text-sm">Propósito</h3>
-                        <p className="leading-relaxed text-zinc-200">
-                            Atuar como espaço comunitário de defesa de direitos, participação popular e promoção da vida,
-                            reconhecendo que todas as pessoas possuem necessidades, mas algumas enfrentam situações de
-                            maior vulnerabilidade.
-                        </p>
-                    </div>
-
-                    <div className="flex flex-col gap-3 bg-brand-800 rounded-xl p-6">
-                        <h3 className="text-amber-300 font-semibold uppercase tracking-widest text-sm">Missão</h3>
-                        <p className="leading-relaxed text-zinc-200">
-                            Acolher crianças, adolescentes, jovens, adultos e famílias em situação de vulnerabilidade
-                            social, oferecendo apoio, acolhimento e oportunidades de desenvolvimento humano, social,
-                            educacional, cultural e profissional.
-                        </p>
-                    </div>
-
-                    <div className="flex flex-col gap-3 bg-brand-800 rounded-xl p-6">
-                        <h3 className="text-amber-300 font-semibold uppercase tracking-widest text-sm">Visão</h3>
-                        <p className="leading-relaxed text-zinc-200">
-                            Ser um espaço permanente de acolhimento, aprendizado e transformação social, fortalecendo
-                            vínculos e contribuindo para que moradores do Genibaú e bairros vizinhos tenham acesso a
-                            educação, cultura, profissionalização e melhores condições de vida.
-                        </p>
-                    </div>
-
                 </div>
             </section>
 
