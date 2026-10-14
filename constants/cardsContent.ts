@@ -15,5 +15,5 @@ export const cardsContent: cardContent[] = [
     { titulo: "Ritimos", descricao: "Atividade física gratuita para a comunidade.", imagem: "/imagesCards/ritimos.jpeg", status: "Ativo", modalidade: "cultura", faixaEtaria: "adulto" },
     { titulo: "Ceará sem Fome", descricao: "Fornecimento de 100 quentinhas diariamente para pessoas em situação de vulnerabilidade.", imagem: "/imagesCards/ceara-sem-fome.png", status: "Ativo", modalidade: "saude", faixaEtaria: "adulto" },
     { titulo: "Oficina de Corte e Costura", descricao: "Curso completo e gratuito para aprender a costurar do zero.", imagem: "/imagesCards/corte-e-costura.jpeg", status: "Pausado", modalidade: "artezanato", faixaEtaria: "adulto" },
-    { titulo: "Fisioterapia", descricao: "Acompanhamento fisioterapico gratuito.", imagem: "/imagesCards/placeholder.png", status: "Ativo", modalidade: "saude", faixaEtaria: "todas as idades" }
+    { titulo: "Fisioterapia", descricao: "Acompanhamento fisioterapico gratuito.", imagem: "/imagesCards/fisioterapia.jpeg", status: "Ativo", modalidade: "saude", faixaEtaria: "todas as idades" }
 ];
